@@ -1,0 +1,29 @@
+{
+  "name": "react-native-file-log",
+  "version": "1.0.1",
+  "description": "Write log to file for React native app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LeoLucaNexsoft/react-native-file-log.git"
+  },
+  "keywords": [
+    "react",
+    "native",
+    "react native",
+    "file",
+    "log",
+    "logger",
+    "logging"
+  ],
+  "author": "tadangquynh@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/LeoLucaNexsoft/react-native-file-log/issues"
+  },
+  "homepage": "https://github.com/LeoLucaNexsoft/react-native-file-log#readme"
+}
+
