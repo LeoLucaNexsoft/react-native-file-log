@@ -1,6 +1,6 @@
 {
   "name": "react-native-file-log",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Write log to file for React native app",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/LeoLucaNexsoft/react-native-file-log.git"
+    "url": "git+https://github.com/nowarzz/react-native-file-log.git"
   },
   "keywords": [
     "react",
