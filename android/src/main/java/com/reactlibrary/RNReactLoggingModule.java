@@ -2,7 +2,6 @@
 package com.reactlibrary;
 
 import android.util.Log;
-import android.os.Environment;
 
 import com.facebook.react.bridge.Promise;
 import com.facebook.react.bridge.ReactApplicationContext;
@@ -66,23 +65,10 @@ public class RNReactLoggingModule extends ReactContextBaseJavaModule {
 
 
     void writeLogToFile(String content) {
-        File logDirectory = new File( Environment.getExternalStorageDirectory() + "/AeffeCQ" );
-        File logFolder = new File(logDirectory + "/log");
-
-        // create app folder
-        if ( !logDirectory.exists() ) {
-            logDirectory.mkdir();
-        }
-
-        // create log folder
-        if ( !logFolder.exists() ) {
-            logFolder.mkdir();
-        }
-
+        File logFolder = new File(this.reactContext.getFilesDir().getAbsolutePath() + "/rn-loggings");
         if (!logFolder.exists() && !logFolder.mkdir()) {
             return;
         }
-
         // get latest log file
         File[] logFiles = logFolder.listFiles(new FilenameFilter() {
             @Override
@@ -158,7 +144,7 @@ public class RNReactLoggingModule extends ReactContextBaseJavaModule {
         File logFolder = new File(this.reactContext.getFilesDir().getAbsolutePath() + "/rn-loggings");
         WritableArray result = new WritableNativeArray();
         if (!logFolder.exists() && !logFolder.mkdir()) {
-            promise.reject("Folder Not Exist and Failed To Create Folder");
+            promise.resolve(result);
             return;
         }
         File[] logFiles = logFolder.listFiles(new FilenameFilter() {
