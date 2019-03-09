@@ -158,7 +158,7 @@ public class RNReactLoggingModule extends ReactContextBaseJavaModule {
         File logFolder = new File(this.reactContext.getFilesDir().getAbsolutePath() + "/rn-loggings");
         WritableArray result = new WritableNativeArray();
         if (!logFolder.exists() && !logFolder.mkdir()) {
-            promise.reject(result);
+            promise.reject("Folder Not Exist and Failed To Create Folder");
             return;
         }
         File[] logFiles = logFolder.listFiles(new FilenameFilter() {
